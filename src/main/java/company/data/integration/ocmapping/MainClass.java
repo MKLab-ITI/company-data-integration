@@ -5,6 +5,8 @@
  */
 package company.data.integration.ocmapping;
 
+import company.data.integration.ocmapping.OCUtils.StateCodes;
+
 /**
  *
  * @author vasgat
@@ -12,6 +14,7 @@ package company.data.integration.ocmapping;
 public class MainClass {
 
     public static void main(String[] main) {
-
+        StateCodes state_codes = new StateCodes();
+        state_codes.findCode("state of columbia");
     }
 }
