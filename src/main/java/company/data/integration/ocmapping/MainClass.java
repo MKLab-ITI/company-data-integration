@@ -5,7 +5,6 @@
  */
 package company.data.integration.ocmapping;
 
-import company.data.integration.ocmapping.OCUtils.StateCodes;
 import java.io.UnsupportedEncodingException;
 
 /**
@@ -15,8 +14,8 @@ import java.io.UnsupportedEncodingException;
 public class MainClass {
 
     public static void main(String[] main) throws UnsupportedEncodingException {
-        CompanyQuery query = new CompanyQuery.Builder("Nike Inc").build();
-        CompanyMapper mapper = new CompanyMapper(new OpenCorporatesClient("********"));
+        CompanyQuery query = new CompanyQuery.Builder("Adidas America").country("united states").build();
+        CompanyMapper mapper = new CompanyMapper(new OpenCorporatesClient("**********"));
         
         System.out.println(mapper.findMatch(query));
         

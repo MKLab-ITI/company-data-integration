@@ -36,6 +36,7 @@ import javafx.util.Pair;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.jsoup.Connection;
+import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -249,7 +250,7 @@ public class CompanyMapper {
 
         if (query.country.toLowerCase().equals("united states") && query.state == null) {
             Pair<String, String> codes = searchWikipedia(query.company_name);
-            if (codes.getKey().equals("us")) {
+            if (codes.getKey() != null && codes.getKey().equals("us")) {
                 return codes;
             } else {
                 return new Pair("us", null);
@@ -293,9 +294,11 @@ public class CompanyMapper {
                 }
             }
         } catch (IOException ex) {
-            Logger.getLogger(CompanyMapper.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(CompanyMapper.class.getName()).log(Level.SEVERE, null, ex);
+            return new Pair(null, null);
         } catch (URISyntaxException ex) {
-            Logger.getLogger(CompanyMapper.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(CompanyMapper.class.getName()).log(Level.SEVERE, null, ex);
+            return new Pair(null, null);
         }
         return new Pair(null, null);
     }
