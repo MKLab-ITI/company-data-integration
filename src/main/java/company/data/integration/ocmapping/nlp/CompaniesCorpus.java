@@ -18,7 +18,6 @@ package company.data.integration.ocmapping.nlp;
 import certh.iti.mklab.jSimilarity.documentUtils.CompanyDocument;
 import certh.iti.mklab.jSimilarity.documentUtils.Corpus;
 import certh.iti.mklab.jSimilarity.tfidf.TFIDF;
-import java.util.ArrayList;
 import java.util.HashSet;
 
 /**
@@ -33,7 +32,6 @@ public class CompaniesCorpus {
     private CompaniesCorpus(Builder builder) {
         this.corpus = builder.corpus;
 
-        System.out.println(corpus.size());
         this.tfidf = new TFIDF(corpus);
         this.tfidf.calculate();
     }
