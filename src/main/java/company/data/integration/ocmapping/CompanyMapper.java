@@ -93,8 +93,6 @@ public class CompanyMapper {
     public String findMatch(CompanyQuery query) throws UnsupportedEncodingException {
         Pair<String, String> codes = getCodes(query);
 
-        System.out.println(codes);
-
         JSONArray results = getQueryResults(query, codes);
 
         String search_term = query.company_name.replace(".", "").replace(",", "");

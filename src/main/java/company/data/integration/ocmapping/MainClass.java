@@ -14,7 +14,7 @@ import java.io.UnsupportedEncodingException;
 public class MainClass {
 
     public static void main(String[] main) throws UnsupportedEncodingException {
-        CompanyQuery query = new CompanyQuery.Builder("Adidas America").country("united states").build();
+        CompanyQuery query = new CompanyQuery.Builder("Coca-Cola Company").build();
         CompanyMapper mapper = new CompanyMapper(new OpenCorporatesClient("**********"));
         
         System.out.println(mapper.findMatch(query));
