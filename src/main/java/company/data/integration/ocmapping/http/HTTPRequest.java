@@ -70,7 +70,7 @@ public class HTTPRequest {
     private void sendGet() {
 
         try {
-            System.out.println("URL: " + url);
+            //System.out.println("URL: " + url);
 
             URL obj = new URL(url);
 
