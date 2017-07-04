@@ -15,53 +15,30 @@
  */
 package company.data.integration.ocmapping;
 
-import java.util.UUID;
-
 /**
  *
  * @author vasgat
  */
-public class CompanyEntity {
+public class CompanyQuery {
 
     public String company_name;
     public String country;
     public String state;
-    public String address;
-    public String id;
 
-    private CompanyEntity(Builder builder) {
-
-        if (builder.id == null) {
-            this.id = UUID.randomUUID().toString();
-        } else {
-            this.id = builder.id;
-        }
-        this.company_name = builder.company_name;
-
-        this.country = builder.country;
-
-        this.state = builder.state;
-
-        this.address = builder.address;
-
-        this.country = builder.country;
+    private CompanyQuery(String company_name, String country, String state) {
+        this.company_name = company_name;
+        this.country = country;
+        this.state = state;
     }
 
     public static class Builder {
 
-        private String id;
         private String company_name;
-        private String state;
         private String country;
-        private String address;
+        private String state;
 
         public Builder(String company_name) {
-            this.company_name = company_name.replace(",", "");
-        }
-
-        public Builder id(String id) {
-            this.id = id;
-            return this;
+            this.company_name = company_name;
         }
 
         public Builder country(String country) {
@@ -74,13 +51,8 @@ public class CompanyEntity {
             return this;
         }
 
-        public Builder address(String address) {
-            this.address = address;
-            return this;
-        }
-
-        public CompanyEntity build() {
-            return new CompanyEntity(this);
+        public CompanyQuery build() {
+            return new CompanyQuery(company_name, country, state);
         }
     }
 }
