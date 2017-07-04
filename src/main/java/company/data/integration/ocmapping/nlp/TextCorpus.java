@@ -17,6 +17,7 @@ package company.data.integration.ocmapping.nlp;
 
 import certh.iti.mklab.jSimilarity.documentUtils.CompanyDocument;
 import certh.iti.mklab.jSimilarity.documentUtils.Corpus;
+import certh.iti.mklab.jSimilarity.documentUtils.TextDocument;
 import certh.iti.mklab.jSimilarity.tfidf.TFIDF;
 import java.util.HashSet;
 
@@ -24,24 +25,24 @@ import java.util.HashSet;
  *
  * @author vasgat
  */
-public class CompaniesCorpus {
+public class TextCorpus {
 
     private Corpus corpus;
     private TFIDF tfidf;
 
-    private CompaniesCorpus(Builder builder) {
+    private TextCorpus(Builder builder) {
         this.corpus = builder.corpus;
 
         this.tfidf = new TFIDF(corpus);
         this.tfidf.calculate();
     }
 
-    public double similarity(String name1, String name2) {
-        CompanyDocument document = new CompanyDocument.Builder(name1)
+    public double similarity(String string1, String string2) {
+        CompanyDocument document = new CompanyDocument.Builder(string1)
                 .id("candidate1")
                 .build();
 
-        CompanyDocument document2 = new CompanyDocument.Builder(name2)
+        CompanyDocument document2 = new CompanyDocument.Builder(string2)
                 .id("candidate2")
                 .build();
 
@@ -54,23 +55,23 @@ public class CompaniesCorpus {
     public static class Builder {
 
         private Corpus corpus;
-        private HashSet<String> companies;
+        private HashSet<String> strings;
 
-        public Builder(HashSet<String> companies) {
-            this.companies = companies;
+        public Builder(HashSet<String> strings) {
+            this.strings = strings;
         }
 
-        public CompaniesCorpus build() {
+        public TextCorpus build() {
             corpus = new Corpus();
-            int i = 0;
-            for (String company : companies) {
-                CompanyDocument document = new CompanyDocument.Builder(company)
+
+            for (String company : strings) {
+                TextDocument document = new TextDocument.Builder(company)
                         .build();
 
                 corpus.addDocument(document);
             }
 
-            return new CompaniesCorpus(this);
+            return new TextCorpus(this);
         }
     }
 }

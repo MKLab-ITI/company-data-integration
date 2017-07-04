@@ -58,7 +58,7 @@ public class CountryCodes {
         }
 
         if (max_sim > 0.75) {
-            return candidate_country;
+            return countries.get(candidate_country);
         }
 
         return null;

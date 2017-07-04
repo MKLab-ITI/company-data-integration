@@ -19,6 +19,11 @@
     
     <dependencies>
         <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>3.2.2</version>
+        </dependency>
+        <dependency>
             <groupId>com.github.vasgat</groupId>
             <artifactId>jSimilarity</artifactId>
             <version>v0.1-alpha</version>
