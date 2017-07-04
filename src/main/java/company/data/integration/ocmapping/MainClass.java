@@ -5,6 +5,9 @@
  */
 package company.data.integration.ocmapping;
 
+import company.data.integration.ocmapping.similarityfunctions.CompanyMatchSimilarity;
+import company.data.integration.ocmapping.OCUtils.CountryCodes;
+import company.data.integration.ocmapping.OCUtils.StateCodes;
 import java.io.UnsupportedEncodingException;
 
 /**
@@ -14,10 +17,19 @@ import java.io.UnsupportedEncodingException;
 public class MainClass {
 
     public static void main(String[] main) throws UnsupportedEncodingException {
-        CompanyQuery query = new CompanyQuery.Builder("Coca-Cola Company").build();
-        CompanyMapper mapper = new CompanyMapper(new OpenCorporatesClient("**********"));
-        
+        CompanyEntity query = new CompanyEntity.Builder("Coca-Cola Company").build();
+        StateCodes state_codes = new StateCodes();
+        CountryCodes country_codes = new CountryCodes();
+        CompanyMatchSimilarity similarity = new CompanyMatchSimilarity();
+
+        CompanyMapper mapper = new CompanyMapper(
+                new OpenCorporatesClient("your_api_key"),
+                state_codes,
+                country_codes,
+                similarity
+        );
+
         System.out.println(mapper.findMatch(query));
-        
+
     }
 }

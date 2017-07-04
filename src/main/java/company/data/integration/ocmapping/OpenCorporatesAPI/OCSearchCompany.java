@@ -119,6 +119,7 @@ public class OCSearchCompany {
             request.GET("companies/search");
             return new JSONObject(request.getResponse());
         }
+
     }
 
 }

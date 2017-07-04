@@ -19,8 +19,6 @@ import certh.iti.mklab.jSimilarity.stringsimilarities.JaroWinklerDistance;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,6 +34,15 @@ public class StateCodes {
 
     public StateCodes() {
         loadCodes(DEFAULT_FILE_PATH);
+        states.put("quebec", "qc");
+        states.put("Nova Scotia", "ns");
+        states.put("New Brunswick", "nb");
+        states.put("Manitoba", "mb");
+        states.put("British Columbia", "bc");
+        states.put("Prince Edward Island", "pe");
+        states.put("Saskatchewan", "sk");
+        states.put("Alberta", "al");
+        states.put("Newfoundland and Labrador", "nl");
     }
 
     public StateCodes(String filePath) {
@@ -45,6 +52,10 @@ public class StateCodes {
     public String findCode(String state) {
         if (states.containsKey(state.toLowerCase())) {
             return states.get(state.toLowerCase());
+        }
+
+        if (states.containsValue(state.toLowerCase())) {
+            return state.toLowerCase();
         }
 
         JaroWinklerDistance jw = new JaroWinklerDistance();

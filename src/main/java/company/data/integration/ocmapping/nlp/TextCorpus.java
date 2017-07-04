@@ -24,12 +24,12 @@ import java.util.HashSet;
  *
  * @author vasgat
  */
-public class CompaniesCorpus {
+public class TextCorpus {
 
     private Corpus corpus;
     private TFIDF tfidf;
 
-    private CompaniesCorpus(Builder builder) {
+    private TextCorpus(Builder builder) {
         this.corpus = builder.corpus;
 
         this.tfidf = new TFIDF(corpus);
@@ -54,23 +54,23 @@ public class CompaniesCorpus {
     public static class Builder {
 
         private Corpus corpus;
-        private HashSet<String> companies;
+        private HashSet<String> strings;
 
-        public Builder(HashSet<String> companies) {
-            this.companies = companies;
+        public Builder(HashSet<String> strings) {
+            this.strings = strings;
         }
 
-        public CompaniesCorpus build() {
+        public TextCorpus build() {
             corpus = new Corpus();
-            int i = 0;
-            for (String company : companies) {
-                CompanyDocument document = new CompanyDocument.Builder(company)
+
+            for (String string : strings) {
+                CompanyDocument document = new CompanyDocument.Builder(string)
                         .build();
 
                 corpus.addDocument(document);
             }
 
-            return new CompaniesCorpus(this);
+            return new TextCorpus(this);
         }
     }
 }
