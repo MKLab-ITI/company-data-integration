@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package certh.iti.mklab.fuzzymatchsimilarity;
+package company.data.integration.similarityfunctions;
 
 import company.data.integration.ocmapping.CompanyEntity;
 import company.data.integration.ocmapping.nlp.TextCorpus;
