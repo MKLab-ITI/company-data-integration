@@ -53,6 +53,11 @@ public class HTTPRequest {
         sendGet();
     }
 
+    @Override
+    public String toString() {
+        return url;
+    }
+
     public String getResponse() {
         return response;
     }
