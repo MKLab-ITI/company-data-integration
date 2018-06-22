@@ -15,8 +15,8 @@
  */
 package company.data.integration.ocmapping.nlp;
 
-import certh.iti.mklab.jSimilarity.documentUtils.CompanyDocument;
 import certh.iti.mklab.jSimilarity.documentUtils.Corpus;
+import certh.iti.mklab.jSimilarity.documentUtils.TextDocument;
 import certh.iti.mklab.jSimilarity.tfidf.TFIDF;
 import java.util.HashSet;
 
@@ -37,11 +37,11 @@ public class TextCorpus {
     }
 
     public double similarity(String name1, String name2) {
-        CompanyDocument document = new CompanyDocument.Builder(name1)
+        TextDocument document = new TextDocument.Builder(name1)
                 .id("candidate1")
                 .build();
 
-        CompanyDocument document2 = new CompanyDocument.Builder(name2)
+        TextDocument document2 = new TextDocument.Builder(name2)
                 .id("candidate2")
                 .build();
 
@@ -64,7 +64,7 @@ public class TextCorpus {
             corpus = new Corpus();
 
             for (String string : strings) {
-                CompanyDocument document = new CompanyDocument.Builder(string)
+                TextDocument document = new TextDocument.Builder(string)
                         .build();
 
                 corpus.addDocument(document);

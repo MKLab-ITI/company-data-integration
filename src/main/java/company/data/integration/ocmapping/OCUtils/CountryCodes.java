@@ -16,10 +16,6 @@
 package company.data.integration.ocmapping.OCUtils;
 
 import certh.iti.mklab.jSimilarity.stringsimilarities.JaroWinklerDistance;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -28,21 +24,19 @@ import java.util.Map;
  */
 public class CountryCodes {
 
-    private String DEFAULT_FILE_PATH = "src\\main\\java\\company\\data\\integration\\ocmapping\\data\\country_codes.csv";
-
     private Map<String, String> countries;
 
-    public CountryCodes() {
-        loadCodes(DEFAULT_FILE_PATH);
-    }
-
-    public CountryCodes(String filePath) {
-        loadCodes(filePath);
+    public CountryCodes(Jurisdictions jurisdictions) {
+        this.countries = jurisdictions.getCountryCodes();
     }
 
     public String findCode(String state) {
         if (countries.containsKey(state.toLowerCase())) {
             return countries.get(state.toLowerCase());
+        }
+
+        if (countries.containsValue(state.toLowerCase())) {
+            return state.toLowerCase();
         }
 
         JaroWinklerDistance jw = new JaroWinklerDistance();
@@ -69,24 +63,16 @@ public class CountryCodes {
             if (text.toLowerCase().contains(entry.getKey())) {
                 return entry.getValue();
             }
+
+        }
+
+        if (!text.replaceAll("\\bus\\b", "").equals(text) || !text.replaceAll("\\busa\\b", "").equals(text)) {
+            return "us";
+        }
+
+        if (!text.replaceAll("\\buk\\b", "").equals(text)) {
+            return "gb";
         }
         return null;
-    }
-
-    public void loadCodes(String filePath) {
-
-        countries = new HashMap();
-
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
-
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] codes = line.split(";");
-                countries.put(codes[0], codes[1]);
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

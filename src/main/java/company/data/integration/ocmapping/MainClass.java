@@ -1,14 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package company.data.integration.ocmapping;
 
 import company.data.integration.ocmapping.similarityfunctions.CompanyMatchSimilarity;
 import company.data.integration.ocmapping.OCUtils.CountryCodes;
+import company.data.integration.ocmapping.OCUtils.Jurisdictions;
 import company.data.integration.ocmapping.OCUtils.StateCodes;
 import java.io.UnsupportedEncodingException;
+import javafx.util.Pair;
+import org.bson.Document;
 
 /**
  *
@@ -17,19 +15,17 @@ import java.io.UnsupportedEncodingException;
 public class MainClass {
 
     public static void main(String[] main) throws UnsupportedEncodingException {
-        CompanyEntity query = new CompanyEntity.Builder("Coca-Cola Company").build();
-        StateCodes state_codes = new StateCodes();
-        CountryCodes country_codes = new CountryCodes();
         CompanyMatchSimilarity similarity = new CompanyMatchSimilarity();
+        CompanyEntity query = new CompanyEntity.Builder("Apple Inc").build();
 
         CompanyMapper mapper = new CompanyMapper(
-                new OpenCorporatesClient("your_api_key"),
-                state_codes,
-                country_codes,
+                new OpenCorporatesClient("MCS2yzvPpwycExpJUAFM"),
+                new Jurisdictions(),
                 similarity
         );
 
-        System.out.println(mapper.findMatch(query));
+        Document result = mapper.findMatch(query);
 
+        System.out.println(result.toJson());
     }
 }

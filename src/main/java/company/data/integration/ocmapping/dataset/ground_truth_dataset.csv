@@ -4,9 +4,9 @@ F06000001006;Roper Technologies;united states;FL;6901 PROFESSIONAL PKWY EAST SUI
 402090;Philipps-Van Heusen;united states;NY; 200 MADISON AVENUE NEW YORK NY 10016 2123813500;Phillips-Van Heusen Corporation;Phillips-Van Heusen Corp.;
 07023598;Ensco;united kingdom;undefined;6 Chesterfield Gardens London W1J 5BQ United Kingdom;Ensco plc;Ensco;ENSCO;
 0272922;Alexion Pharmaceuticals;united states;CT; 100 COLLEGE STREET NEW HAVEN CT 06510 2032722596;Alexion Pharmaceuticals Inc;Alexion Pharmaceuticals;ALEXION PHARMACEUTICALS;Alexion Pharmaceuticals, Inc.;
-null;Accenture;united states;CA; 1661 PAGE MILL ROAD PALO ALTO CA 94304 650-213-2000;    Accenture plc;Accenture;Accenture plc;ACCENTURE;
+C2421887;Accenture;united states;CA; 1661 PAGE MILL ROAD PALO ALTO CA 94304 650-213-2000;    Accenture plc;Accenture;Accenture plc;ACCENTURE;
 0282328;Doctor's Associates Inc.;united states;CT;Milford, Connecticut;Doctor's Associates, Inc. (DAI).;
-null;Key Energy Services, Inc.;united states;TX; 1301 MCKINNEY STREET SUITE 1800 HOUSTON TX 77010 713-651-4300;Key Energy Services Inc;Key Energy Services, Inc.;
+0800750440;Key Energy Services, Inc.;united states;TX; 1301 MCKINNEY STREET SUITE 1800 HOUSTON TX 77010 713-651-4300;Key Energy Services Inc;Key Energy Services, Inc.;
 1002471;Wolseley;switzerland;undefined;Grafenauweg 10 CH-6301, Zug;WOLSELEY;
 58389123;Grifols;spain;undefined;Avinguda de la Generalitat, 152 Parc empresarial Can Sant Joan 08174 Sant Cugat del Valles, Barcelona;Grifols;Grifols SA;
 0437674;General Cable;united states;KY; 4 TESSENEER DRIVE HIGHLAND HEIGHTS KY 41076 8595728000;General Cable;General Cable Corporation;
@@ -90,7 +90,7 @@ null;LKQ;united states;IL; 500 WEST MADISON STREET SUITE 2800 CHICAGO IL 60661 3
 null;JDS Uniphase Corporation;united states;CA; 1768 AUTOMATION PARKWAY SAN JOSE CA 95131;JDS Uniphase Corporation;
 043444218;IPG Photonics Corporation;united states;MA; 50 OLD WEBSTER ROAD OXFORD MA 01540 5083731100;IPG Photonics Corporation;
 F07000001492;Intertape Polymer Group;united states;FL;100 Paramount Drive  Suite 300  Sarasota, FL 34232;Intertape Polymer Group;
-2138754;IDEX Corporation;united states;IL; 1925 WEST FIELD COURT LAKE FOREST IL 60045 8474987070;IDEX Corporation;
+null;IDEX Corporation;united states;IL; 1925 WEST FIELD COURT LAKE FOREST IL 60045 8474987070;IDEX Corporation;
 3009755;Hyster-Yale Materials Handling Inc.;united states;OR; 2701 NW VAUGHN PORTLAND OR 97210 5037216000;Hyster-Yale Materials Handling Inc.;
 null;HRG Group Inc.;united states;NY; 450 PARK AVENUE 29TH FLOOR NEW YORK NY 10022 212-906-8548;HRG Group Inc.;HRG Group;
 P93000006566;HEICO;united states;FL; 3000 TAFT ST HOLLYWOOD FL 33021 954-987-4000;HEICO;
@@ -607,13 +607,13 @@ null;Link REIT;hong kong;undefined;33/F, AXA Tower, One Landmark 100 How Ming St
 051588348;CSL;australia;undefined;45 Poplar Road Parkville, VIC 3052 Australia;CSL;CSL Limited;
 1148593859;Valeant Pharmaceuticals;canada;undefined;Laval, Quebec, Canada;Valeant Pharmaceuticals;Valeant Pharmaceuticals International Inc;Valeant Pharmaceuticals International;
 0460102672;Belgacom;belgium;undefined;Boulevard du Roi Albert II 27B Brussels, 1030 Belgium;Belgacom;BELGACOM;
-3945143;CF Industries Holdings;united states;IL; 4 PARKWAY NORTH SUITE 400 DEERFIELD IL 60015 (847) 405-2400;CF Industries Holdings;CF Industries;CF Industries Holdings, Inc.;Cf Industries Holdings;
+null;CF Industries Holdings;united states;IL; 4 PARKWAY NORTH SUITE 400 DEERFIELD IL 60015 (847) 405-2400;CF Industries Holdings;CF Industries;CF Industries Holdings, Inc.;Cf Industries Holdings;
 001065716;American Tower;united states;TX; PO BOX 57747 SUITE 714 WEBSTER TX 77598 8006210501;AMERICAN TOWER;American Tower;American Tower Corporation;
-000114309;Staples;united states;MA; 500 STAPLES DRIVE P O BOX 9328 FRAMINGHAM MA 01702 5082535000;Staples;Staples Inc.;Staples, Inc.;Staples Inc;STAPLES;
+042896127;Staples;united states;MA; 500 STAPLES DRIVE P O BOX 9328 FRAMINGHAM MA 01702 5082535000;Staples;Staples Inc.;Staples, Inc.;Staples Inc;STAPLES;
 1389215;Grupo Televisa;mexico;undefined;Avenida Vasco de Quiroga 2000 Colonia Santa Fe Mexico, DF 01210 Mexico;Grupo Televisa;Televisa;
 L74899DL1964GOI004281;Bharat Heavy Electricals;india;undefined;BHEL House Siri Fort New Delhi, 110 049 India;Bharat Heavy Electricals;Bharat Heavy Electricals Limited - BHEL;
 0044435900;Whole Foods Market Inc.;united states;TX; 550 BOWIE STREET AUSTIN TX 78703 5124774455;Whole Foods Market, 365;Whole Foods Market;Whole Foods Market, Inc.;WHOLE FOODS MARKET;
-02746616;Reed Elsevier;united kingdom;undefined;1-3 Strand London, WC2N 5JR United Kingdom;RELX (Reed Elsevier);REED ELSEVIER;Reed Elsevier;Reed Elsevier N.V.;
+00077536;Reed Elsevier;united kingdom;undefined;1-3 Strand London, WC2N 5JR United Kingdom;RELX (Reed Elsevier);REED ELSEVIER;Reed Elsevier;Reed Elsevier N.V.;
 8027;Sherwin-Williams;united states;OH; 101 PROSPECT AVE NW CLEVELAND OH 44115 2165662200;Sherwin-Williams;Sherwin-Williams Company;The Sherwin-Williams Company;
 null;Nielsen Holdings;united states;NY; 85 BROAD STREET NEW YORK NY 10004 (646) 654-5000;Nielsen N.V.;Nielsen Holdings N.V.;Nielsen Holdings;
 1910390000;Bed Bath & Beyond Inc.;united states;NJ; 650 LIBERTY AVENUE UNION NJ 07083 2013791520;Bed Bath & Beyond;Bed Bath & Beyond Inc.;Bed Bath & Beyond, Inc.;BED BATH & BEYOND;
@@ -628,7 +628,7 @@ C0815360;Allergan;united states;CA; 2525 DUPONT DRIVE IRVINE CA 92612 7142464500
 276604;KeyCorp;united states;OH; 127 PUBLIC SQ CLEVELAND OH 44114-1306 2166896300;KeyCorp;
 2363564;Annaly Capital Management;united states;NY; 1211 AVENUE OF THE AMERICAS NEW YORK NY 10036 212 696 0100;Annaly Capital Management;Annaly Capital Management, Inc.;ANNALY CAPITAL MANAGEMENT;
 F1924184;Genworth Financial;united states;VA; 6620 WEST BROAD STREET RICHMOND VA 23230 804-281-6000;Genworth Financial;Genworth Financial, Inc.;
-0000059307;PGE;poland;undefined;2 Mysia Street Warsaw, 00-496 Poland;PGE;
+0000059307;PGE - POLSKA GRUPA ENERGETYCZNA;poland;undefined;2 Mysia Street Warsaw, 00-496 Poland;PGE;
 000351611;Dollar General;united states;TN; 100 MISSION RIDGE GOODLETTSVILLE TN 37072 6158554000;Dollar General Corporation;Dollar General;
 L74899DL1995PLC070609;Bharti Airtel;india;undefined;Aravali Crescent 1, Nelson Mandela Road Vasant Kunj, Phase - II New Delhi, 110 070 India;Bharti Airtel;BHARTI AIRTEL;
 0705047;Reynolds American;united states;NC; 401 NORTH MAIN ST WINSTON SALEM NC 27102 3367412000;Reynolds American;Reynolds American Inc.;Reynolds American, Inc.;
@@ -721,7 +721,7 @@ C1959663;IMPAC Mortgage Holdings, Inc.;united states;CA; 19500 JAMBOREE ROAD IRV
 687390;Bob Evans Farms, Inc.;united states;OH; 8111 SMITH'S MILL ROAD NEW ALBANY OH 43054 614-491-2225;Bob Evans Farms, Inc.;
 76058;CDI Corporation;united states;PA; 1735 MARKET STREET SUITE 200 PHILADELPHIA PA 19103 2155692200;CDI Corporation;
 0800042348;Marathon Oil;united states;TX; P O BOX 3128 HOUSTON TX 77253-3128 7136296600;Marathon Oil;  Marathon Oil Corporation;MARATHON OIL;Marathon Oil Corporation;
-3704721;Hospira, Inc.;united states;IL; 275 FIELD DR LAKE FOREST IL 60045 8479376472;Hospira, Inc.;Hospira;
+null;Hospira, Inc.;united states;IL; 275 FIELD DR LAKE FOREST IL 60045 8479376472;Hospira, Inc.;Hospira;
 15184518;Mentor Graphics;united states;OR; 8005 SW BOECKMAN RD WILSONVILLE OR 97070-7777 5036857000;Mentor Graphics;
 042837575;NetScout Systems, Inc.;united states;MA; 310 LITTLETON ROAD WESTFORD MA 01886 978-614-4000;NetScout Systems, Inc.;
 F99000003085;Health Management Associates;united states;FL; 5811 PELICAN BAY BLVD SUITE 500 NAPLES FL 34108-2710 239-598-3131;Health Management Associates;
@@ -754,7 +754,7 @@ C2159723;Yahoo! Inc.;united states;CA; YAHOO! INC. 701 FIRST AVENUE SUNNYVALE CA
 0425737;Nelnet;united states;NE; 121 SOUTH 13TH ST STE 201 LINCOLN NE 68508 402-458-2370;Nelnet;
 8513111;Lithia Motors, Inc.;united states;OR; 150 NORTH BARTLETT STREET MEDFORD OR 97501 541-776-6401;Lithia Motors, Inc.;
 803455;Respironics;united states;PA; 1010 MURRY RIDGE LANE MURRYSVILLE PA 15668-8525 7243875200;Respironics;
-918903;  Transocean Ltd;united states;V8; BLANDONNET INTERNATIONAL BUSINESS CENTER BLDG F, 7TH FLOOR, CHEMIN DE BLANDONNET VERNIER V8 1214 41-58-792-9243;  Transocean Ltd;TRANSOCEAN;Transocean Ltd;Transocean;
+918903;Transocean Ltd;united states;V8; BLANDONNET INTERNATIONAL BUSINESS CENTER BLDG F, 7TH FLOOR, CHEMIN DE BLANDONNET VERNIER V8 1214 41-58-792-9243;  Transocean Ltd;TRANSOCEAN;Transocean Ltd;Transocean;
 0800796786;Dynegy;united states;TX; 1000 LOUISIANA STE 5800 HOUSTON TX 77002 7133677600;Dynegy Inc.;Dynegy;
 P20024;CSX;united states;FL; 500 WATER STREET 15TH FLOOR JACKSONVILLE FL 32202 9043593200;CSX;CSX Corporation;
 00375001;Reinsurance Group of America;united states;MO; 16600 SWINGLEY RIDGE ROAD CHESTERFIELD MO 63017 6367367000;Reinsurance Group of America;Reinsurance Group of America, Inc.;
@@ -765,7 +765,7 @@ F94000003475;National Retail Properties;united states;FL; 450 S ORANGE AVE SUITE
 600413485;Microsoft Corporation;united states;WA; ONE MICROSOFT WAY REDMOND WA 98052-6399 425-882-8080;MICROSOFT;Microsoft;Microsoft Corporation;
 C0117531;Chevron Corporation;united states;CA; 6001 BOLLINGER CANYON ROAD SAN RAMON CA 94583 925-842-2815;Chevron Corporation;CHEVRON;Chevron;Chevron Corp.;
 01394116;Apollo Group;united states;AZ; 4025 S. RIVERPOINT PARKWAY PHOENIX AZ 85040 4809665394;Apollo Education Group, Inc.;Apollo Group;Apollo Education Group;
-2085588;Caterpillar;united states;IL; 100 NE ADAMS ST PEORIA IL 61629 3096751000;Caterpillar Inc.;Caterpillar;CATERPILLAR;CATERPILLAR INC.;
+null;Caterpillar;united states;IL; 100 NE ADAMS ST PEORIA IL 61629 3096751000;Caterpillar Inc.;Caterpillar;CATERPILLAR;CATERPILLAR INC.;
 F0546426;CACI International Inc.;united states;VA; 1100 N GLEBE ST ARLINGTON VA 22201 7038417800;CACI International Inc.;CACI;
 C2357124;AMN Healthcare Services Inc.;united states;CA; 12400 HIGH BLUFF DRIVE SUITE 100 SAN DIEGO CA 92130 8668718519;AMN Healthcare Services Inc.;
 289329;Forest City Enterprises, Inc.;united states;OH; 1100 TERMINAL TOWER 50 PUBLIC SQ CLEVELAND OH 44113 216-621-6060;Forest City Enterprises, Inc.;
@@ -805,7 +805,7 @@ F94000002179;Landstar System, Inc.;united states;FL; 13410 SUTTON PARK DRIVE SOU
 870d8733-94d4-e011-a886-001ec94ffe7f;Otter Tail Corporation;united states;MN; 215 S CASCADE ST PO BOX 496 FERGUS FALLS MN 56538-0496 8664108780;Otter Tail Corporation;
 953140;FirstEnergy;united states;OH; 76 SOUTH MAIN ST AKRON OH 44308-1890 330-761-7837;FirstEnergy Corporation;FirstEnergy Corp.;FirstEnergy;
 649806;Cliffs Natural Resources;united states;OH; 200 PUBLIC SQUARE STE. 3300 CLEVELAND OH 44114-2315 216-694-5700;Cliffs Natural Resources;Cliffs Natural Resources Inc.;CLIFFS NATURAL RESOURCES;
-2905256;Plum Creek Timber;united states;WA; 601 UNION STREET SUITE 3100 SEATTLE WA 98101-1374 (206)467-3600;Plum Creek Timber;Plum Creek Timber Company, Inc.;
+null;Plum Creek Timber;united states;WA; 601 UNION STREET SUITE 3100 SEATTLE WA 98101-1374 (206)467-3600;Plum Creek Timber;Plum Creek Timber Company, Inc.;
 0125972000;Cameron International;united states;TX; 1333 WEST LOOP SOUTH STE 1700 HOUSTON TX 77027 7135133322;Cameron International Corporation;Cameron International;CAMERON INTERNATIONAL;Cameron International Corp.;
 20031315478;Molson Coors Brewing;united states;CO; 1801 CALIFORNIA STREET, SUITE 4600 DENVER CO 80202 303-927-2523;Molson Coors Brewing;Molson Coors Brewing Company;
 20021056790;Newmont Mining;united states;CO; 6363 SOUTH FIDDLERS GREEN CIRCLE GREENWOOD VILLAGE CO 80111 303-863-7414;Newmont Mining;NEWMONT MINING;Newmont Mining Corp;Newmont Mining Corporation;
@@ -815,7 +815,7 @@ EXTUID_2679984;FTI Consulting Belgium;united states;DC; 1101 K STREET NW SUITE B
 556427-2812;Meda AB;sweden;undefined;Pipers vag 2A Box 906 Solna, 170 09 Sweden;Meda AB;
 556571-2709;Findus;united kingdom;undefined;350 Euston Road London, DN31 3SW United Kingdom;Findus;
 0000086269;Kompania Piwowarska;poland;undefined;ul. Szwajcarska 11 Poznan,  61-285 Poland;Kompania Piwowarska;
-null;Facebook;ireland;undefined;Hanover Ranch 5-7 Hanover Quay Dublin 2 Ireland;Facebook;
+462932;Facebook;ireland;undefined;Hanover Ranch 5-7 Hanover Quay Dublin 2 Ireland;Facebook;
 null;eBay;ireland;undefined;eBay HQ, Atrium Building, Old Navan Road, Blanchardstown;eBay;
 HE165;Bank of Cyprus;cyprus;undefined;51 Stasinou St Agia Paraskevi PO Box 24884 Nicosia, 1398 Cyprus;Bank of Cyprus;
 31382;Guerlain;united states;NY;19 East 57th Street 18th Floor New York, NY 10021 United States;Guerlain;
@@ -883,7 +883,7 @@ D07314701;Old Line Bancshares, Inc.;united states;MD; 1525 POINTER RIDGE PLACE B
 4432753;Capitol Federal Financial, Inc.;united states;KS; 700 S KANSAS AVENUE TOPEKA KS 66603 785-235-1341;Capitol Federal Financial, Inc.;
 34541031F;Pool Corporation;united states;LA; 109 NORTHPARK BLVD 4TH FLOOR COVINGTON LA 70433-5001 9858925521;Pool Corporation;
 284424;PPG Industries;united states;PA; ONE PPG PL 40 EAST PITTSBURGH PA 15272 4124343131;PPG Industries Inc.;PPG Industries, Inc.;PPG INDUSTRIES;PPG Industries;
-3881360;Sears Holdings;united states;IL; 3333 BEVERLY ROAD HOFFMAN ESTATES IL 60179 847-286-2500;Sears;Sears Holdings;Sears Holdings Corporation;
+null;Sears Holdings;united states;IL; 3333 BEVERLY ROAD HOFFMAN ESTATES IL 60179 847-286-2500;Sears;Sears Holdings;Sears Holdings Corporation;
 D04900148;Corporate Office Properties Trust, Inc.;united states;MD; 6711 COLUMBIA GATEWAY DRIVE SUITE 300 COLUMBIA MD 21046 4432855400;Corporate Office Properties Trust, Inc.;
 P99000082771;CenterState Banks of Florida;united states;FL; 1101 FIRST ST. S. SUITE 202 WINTER HAVEN FL 33880 863-293-2600;CenterState Banks of Florida;
 C2000113;Callidus Software, Inc.;united states;CA; 4140 DUBLIN BLVD SUITE 400 DUBLIN CA 94568 925-251-2200;Callidus Software, Inc.;
@@ -903,7 +903,7 @@ C1014794;PICO Holdings, Inc.;united states;CA;7979 IVANHOE AVENUE STE 300 LA JOL
 81022;Cantor Fitzgerald;united states;NY; ONE WORLD TRADE CTR 104TH FL NEW YORK NY 10048 2129384858;Cantor Fitzgerald;
 383127;Weis Markets;united states;PA; 1000 S SECOND ST PO BOX 471 SUNBURY PA 17801 570-286-4571;Weis Markets;Weis Markets, Inc.;
 283897;Principal Financial Group;united states;IA; 711 HIGH STREET DES MOINES IA 50392 5152475111;Principal Financial Group;Principal Financial;The Principal Financial Group;Principal Financial Group, Inc.;
-1875506;Akin Gump Strauss Hauer & Feld, LLP / Washington, DC;united states;NY; 590 MADISON AVENUE NEW YORK NY 10022 2128721000;Akin Gump Strauss Hauer & Feld, LLP / Washington, DC;
+1875506;Akin Gump Strauss Hauer & Feld, LLP;united states;NY; 590 MADISON AVENUE NEW YORK NY 10022 2128721000;Akin Gump Strauss Hauer & Feld, LLP;
 0100439771;Pathmark Stores;united states;NJ; 2 PARAGON DRIVE MONTVALE NJ 07645 201-573-9700;Pathmark Stores;
 F08000004914;Interval Leisure Group;united states;FL; 6262 SUNSET DRIVE MIAMI FL 33143 (305) 666-1861;Interval Leisure Group;
 870393339;Novell;united states;MA; 404 WYMAN STREET, SUITE 500 WALTHAM MA 02451 8018617000;Novell;
@@ -924,7 +924,7 @@ C2325889;Calavo Growers, Inc.;united states;CA; 1141A CUMMINGS ROAD SANTA PAULA 
 710198;Penns Woods Bancorp, Inc.;united states;PA; 115 S MAIN ST JERSEY SHORE PA 17740 570-322-1111;Penns Woods Bancorp, Inc.;
 D12000000026;Chatham Lodging Trust;united states;FL; 222 LAKEVIEW AVENUE SUITE 200 WEST PALM BEACH FL 33401 (561) 802-4477;Chatham Lodging Trust;
 43746f86-b0d4-e011-a886-001ec94ffe7f;Deluxe Corporation;united states;MN; 3680 VICTORIA STREET NORTH SHOREVIEW MN 55126 6514837111;Deluxe Corporation;
-5106301000;Johnson's;united states;NJ; ONE JOHNSON & JOHNSON PLZ NEW BRUNSWICK NJ 08933 732-524-2455;JOHNSON & JOHNSON;Johnson's;Johnson & Johnson / 4 California Facilities;Johnson & Johnson;
+5106301000;Johnson & Johnson;united states;NJ; ONE JOHNSON & JOHNSON PLZ NEW BRUNSWICK NJ 08933 732-524-2455;JOHNSON & JOHNSON;Johnson's;Johnson & Johnson / 4 California Facilities;Johnson & Johnson;
 699453;Owens-Illinois, Inc.;united states;OH; ONE MICHAEL OWENS WAY PERRYSBURG OH 43551-2999 5673365000;Owens-Illinois, Inc.;Owens-Illinois;Owens-Illinois Group Inc;
 0008957306;Affiliated Computer Services;united states;TX; 2828 N HASKELL AVE PO BOX 219002 DALLAS TX 75204 2148416111;Affiliated Computer Services;
 042240991;American Science & Engineering, Inc.;united states;MA; C/O AS&E 829 MIDDLESEX TURNPIKE BILLERICA MA 01821 9782628700;American Science & Engineering, Inc.;
@@ -1206,7 +1206,7 @@ L40101DL1975GOI007966;NTPC;india;undefined;Scope Complex Core 7 7 Institutional 
 SC117119;SSE;united kingdom;undefined;Inveralmond House 200 Dunkeld Road Perth, PH1 3AQ United Kingdom;SSE;SSE plc;SSE PLC;
 982463718;Telenor;norway;undefined;Snaroyveien 30 Fornebu, 1331 Norway;Telenor;Telenor ASA;TELENOR;
 62766;Husky Energy;canada;undefined;707 8th Avenue Southwest Box 6525 Station D Calgary, AB T2P 3G7 Canada;Husky Energy;Husky Energy Inc;HUSKY;Husky;HUSKY Energy;
-03591559;Old Mutual;united kingdom;undefined;Old Mutual Place 2 Lambeth Hill London, EC4V 4GG United Kingdom;Old Mutual;Old Mutual plc;Old Mutual PLC;OLD MUTUAL;
+03591559;Old Mutual PLC;united kingdom;undefined;Old Mutual Place 2 Lambeth Hill London, EC4V 4GG United Kingdom;Old Mutual;Old Mutual plc;Old Mutual PLC;OLD MUTUAL;
 28063;Sun Life Financial;canada;undefined;Sun Life Centre 150 King Street West Toronto, ON M5H 1J9 Canada;Sun Life Financial;Sun Life Financial Inc;Sun Life Financial Inc.;SUN LIFE;
 516406-0120;Nordea Bank;sweden;undefined;Smalandsgatan 17 Stockholm, 105 71 Sweden;Nordea Bank;Nordea;Nordea Bank AB;Nordea Bank AB (publ);NORDEA BANK;
 24051830;Unilever;netherlands;undefined;Weena 455 PO Box 760 Rotterdam, 3000 DK Netherlands;UNILEVER;Unilever;Unilever NV;
@@ -1214,7 +1214,7 @@ SC117119;SSE;united kingdom;undefined;Inveralmond House 200 Dunkeld Road Perth, 
 1948667;Michael Kors Holdings;hong kong;undefined;Shop G-22, G/F SOGO Department Store 20 Nathan Road Tsim sha Tsui, Hong Kong;Michael Kors Holdings;
 33002833;CaixaBank;spain;undefined;Avinguda Diagonal, 621-629 Torre II, Planta 8 Barcelona, 08028 Spain;CaixaBank;CaixaBank, S.A.;
 22042592;Lamb Weston Meijer;netherlands;undefined;Stationsweg 18a Postbus 17 Kruiningen,  4416 ZG Netherlands;Lamb Weston / Meijer VOF;
-A401954;The Coca Cola Company;united states;GA; ONE COCA COLA PLAZA ATLANTA GA 30313 404-676-2121;COCA COLA;COCA-COLA;The Coca-Cola Company;Coca Cola;Coca-Cola;Coca-Cola Company;Coca Cola Company;
+A401954;Coca Cola Company;united states;GA; ONE COCA COLA PLAZA ATLANTA GA 30313 404-676-2121;COCA COLA;COCA-COLA;The Coca-Cola Company;Coca Cola;Coca-Cola;Coca-Cola Company;Coca Cola Company;
 8739914;Nike Inc.;united states;OR; ONE BOWERMAN DR BEAVERTON OR 97005-6453 5036713173;Nike;NIKE;Nike Inc.;Nike, Inc.;NIKE, Inc.;Nike Inc;
 000693390;Bruker;united states;MA; 40 MANNING RD BILLERICA MA 01821 978663-3660;  Bruker Corporation;Bruker Corporation;Bruker;
 0074657;Ben & Jerry's;united states;VT; 30 COMMUNITY DRIVE SUITE #1 SOUTH BURLINGTON VT 05403 8026519600;Ben and Jerry's;Ben & Jerry's (i2 company);
@@ -1258,7 +1258,7 @@ null;Bright Horizons;united states;MA;200 TALCOTT AVENUE SOUTH WATERTOWN MA 0247
 2011020800533;Thor Industries;united states;IN; 601 E. BEARDSLEY AVENUE ELKHART IN 46514 (574) 970-7460;Thor Industries;Thor Industries, Inc.;
 M039094;ManpowerGroup;united states;WI; 100 MANPOWER PLACE MILWAUKEE WI 53212 414 961-1000;ManpowerGroup;
 2007050300049;Berry Plastics;united states;IN; 101 OAKLEY STREET PO BOX 959 EVANSVILLE IN 47710 8124242904;Berry Plastics Group, Inc.;Berry Plastics;
-F1685397;Leidos;united states;VA; 11951 FREEDOM DRIVE RESTON VA 20190 571-526-6000;Leidos Holdings, Inc.;Leidos;
+F1685397;Leidos Holdings, Inc;united states;VA; 11951 FREEDOM DRIVE RESTON VA 20190 571-526-6000;Leidos Holdings, Inc.;Leidos;
 C1586442;Quantum Corporation;united states;CA; 224 AIRPORT PARKWAY SUITE 300 SAN JOSE CA 95110 408 944 4000;Quantum Corporation;
 f1e614d9-a2d4-e011-a886-001ec94ffe7f;Regis Corporation;united states;MN; 7201 METRO BLVD MINNEAPOLIS MN 55439 9529477777;Regis Corporation;
 1994061014;Steel Dynamics;united states;IN; 7575 W JEFFERSON BLVD FORT WAYNE IN 46804 260 459 3553;Steel Dynamics;Steel Dynamics, Inc.;
@@ -1268,11 +1268,11 @@ f1e614d9-a2d4-e011-a886-001ec94ffe7f;Regis Corporation;united states;MN; 7201 ME
 692090;Cintas;united states;OH; 6800 CINTAS BLVD P O BOX 625737 CINCINNATI OH 45262 5134591200;Cintas Corporation;Cintas;
 200729010015;American Apparel;united states;CA;747 WAREHOUSE STREET LOS ANGELES CA 90021 213-488-0226;American Apparel;American Apparel Inc;
 F1951948;Graham Holdings Company;united states;VA; 1300 NORTH 17TH STREET SUITE 1700 ARLINGTON VA 22209 7033456300;Graham Holdings Company;Graham Holdings;
-2129976;Ventas;united states;IL; 353 N. CLARK STREET SUITE 3300 CHICAGO IL 60654 3126603800;Ventas;Ventas, Inc.;VENTAS;
-2191014;Stericycle;united states;IL; 28161 NORTH KEITH DRIVE - LAKE FOREST IL 60045 8473675910;Stericycle, Inc.;Stericycle;
+null;Ventas;united states;IL; 353 N. CLARK STREET SUITE 3300 CHICAGO IL 60654 3126603800;Ventas;Ventas, Inc.;VENTAS;
+null;Stericycle, Inc.;united states;IL; 28161 NORTH KEITH DRIVE - LAKE FOREST IL 60045 8473675910;Stericycle, Inc.;Stericycle;
 706662;Teradata;united states;OH; 10000 INNOVATION DRIVE DAYTON OH 45342 937-242-4800;Teradata;Teradata Corporation;TERADATA;
 0800569032;Western Refining;united states;TX; 6500 TROWBRIDGE DRIVE EL PASO TX 79905 (602) 286-1401;Western Refining;Western Refining, Inc.;
-5343358;New Media Investment Group;united states;NY; 1345 AVENUE OF THE AMERICAS NEW YORK NY 10105 (212) 479-5312;New Media Investment Group;
+null;New Media Investment Group;united states;NY; 1345 AVENUE OF THE AMERICAS NEW YORK NY 10105 (212) 479-5312;New Media Investment Group;
 1W16737;Alliant Energy;united states;WI; 4902 NORTH BILTMORE LANE SUITE 1000 MADISON WI 53718-2148 608-458-3311;Alliant Energy;Alliant Energy Corporation;
 1900555305;OGE Energy;united states;OK; 321 N HARVEY P.O. BOX 321 OKLAHOMA CITY OK 73101-0321 4055533000;OGE Energy;OGE Energy Corporation;
 634298;Penske Automotive;united states;MI; 2555 TELEGRAPH RD BLOOMFIELD HILLS MI 48302-0954 248-648-2500;Penske Automotive Group, Inc.;Penske Automotive;
@@ -1295,7 +1295,7 @@ J505042;Genuine Parts;united states;GA; 2999 WILDWOOD PARKWAY ATLANTA GA 30339 6
 0800660109;Fluor;united states;TX; 6700 LAS COLINAS BLVD IRVING TX 75039 4693987000;Fluor;Fluor Corporation;FLUOR;
 078550e8-acd4-e011-a886-001ec94ffe7f;Ecolab;united states;MN; ECOLAB CORPORATE CENTER 370 WABASHA STREET NORTH SAINT PAUL MN 55102 6512502587;Ecolab Inc.;Ecolab;Ecolab, Inc.;Ecolab Inc;ECOLAB;
 C1585456;Edison International;united states;CA; 2244 WALNUT GROVE AVE, P O BOX 800 ROSEMEAD CA 91770 (626) 302-2222;Edison International;EDISON INTERNATIONAL;
-0001941806;Apache;united states;TX; 2000 POST OAK BLVD STE 100 HOUSTON TX 77056-4400 7132966000;Apache Corporation;Apache;APACHE;
+0001941806;Apache Corporation;united states;TX; 2000 POST OAK BLVD STE 100 HOUSTON TX 77056-4400 7132966000;Apache Corporation;Apache;APACHE;
 10176679;Pacha Soap Company;united states;NE; 800 WEST 2ND STREET HASTINGS NE 68901 7856264395;Pacha Soap Company;Pacha Soap Co;
 C2845824;Public Storage;united states;CA; 701 WESTERN AVENUE GLENDALE CA 91201-2349 818-244-8080;Public Storage;PUBLIC STORAGE;
 042348234;Analog Devices, Inc.;united states;MA; ONE TECHNOLOGY WAY NORWOOD MA 02062 7813294700;Analog Devices, Inc.;Analog Devices;ANALOG DEVICES;
@@ -1330,7 +1330,7 @@ F01215987;Choice Hotels International, Inc.;united states;MD; 1 CHOICE HOTELS CI
 177000505;PACCAR Inc.;united states;WA; PACCAR BUILDING 777 106TH AVENUE NE BELLEVUE WA 98004 425 468 7383;PACCAR Inc;PACCAR;Paccar, Inc.;Paccar;
 485283;CMS Energy;united states;MI; ONE ENERGY PLAZA JACKSON MI 49201 5177880550;CMS Energy;CMS Energy Corporation;
 1562592;Ambac Financial Group;united states;NY; ONE STATE ST PLZ NEW YORK NY 10004 2126680340;Ambac Financial Group;Ambac Financial Group, Inc.;
-K024598;KohlΠ¥s Corporation;united states;WI; N56 W17000 RIDGEWOOD DR MENOMONEE FALLS WI 53051 4147835800;Kohl’s Corporation;Kohl's Corporation;Kohl's;KOHLS;Kohls;
+K024598;Kohl's Corporation;united states;WI; N56 W17000 RIDGEWOOD DR MENOMONEE FALLS WI 53051 4147835800;Kohl’s Corporation;Kohl's Corporation;Kohl's;KOHLS;Kohls;
 3816419;EQT;united states;PA; 625 LIBERTY AVENUE SUITE 1700 PITTSBURGH PA 15222 4125535700;EQT;EQT Corporation;
 5052221;El Paso Corp.;united states;TX; 1001 LOUISIANA ST, SUITE 2955A EL PASO BLDG HOUSTON TX 77002 7134202600;El Paso Corp.;EL PASO;
 0100778043;Hudson City Bancorp;united states;NJ; WEST 80 CENTURY RD PARAMUS NJ 07652 2019671900;Hudson City Bancorp;Hudson City Bancorp Inc.;
@@ -1362,7 +1362,7 @@ M055434;MGE Energy, Inc.;united states;WI; 133 SOUTH BLAIR STREET P.O. BOX 1231 
 0007340006;CARBO Ceramics Inc.;united states;TX; 575 NORTH DAIRY ASHFORD SUITE 300 HOUSTON TX 77079 2819216400;CARBO Ceramics Inc.;
 0608387;Houchens Industries;united states;KY; 700 CHURCH ST BOWLING GREEN KY 42102 5028433252;Houchens Industries;
 C1917-5-1968;Bally Technologies;united states;NV; 6601 S. BERMUDA RD. LAS VEGAS NV 89119 7028967700;Bally Technologies;
-243944;Mylan;united states;PA; 1000 MYLAN BOULEVARD CANONSBURG PA 15317 724-514-1800;Mylan, Inc.;Mylan;Mylan N.V.;MYLAN;
+243944;Mylan, Inc;united states;PA; 1000 MYLAN BOULEVARD CANONSBURG PA 15317 724-514-1800;Mylan, Inc.;Mylan;Mylan N.V.;MYLAN;
 F94000000123;Rayonier Inc.;united states;FL; 225 WATER STREET SUITE 1400 JACKSONVILLE FL 32202 9043579100;Rayonier Inc.;
 1339333;RPM International Inc.;united states;OH; 2628 PEARL RD P O BOX 777 MEDINA OH 44258 3302735090;RPM International;RPM International Inc.;
 1276;Diebold Inc.;united states;OH; P.O. BOX 3077 5995 MAYFAIR RD NORTH CANTON OH 44720-8077 3304904000;Diebold;Diebold Inc.;
@@ -1402,7 +1402,7 @@ F04350757;GenVec, Inc.;united states;MD; 910 CLOPPER ROAD SUITE 220N GAITHERSBUR
 34702181D;Cleco Corporation;united states;LA; 2030 DONAHUE FERRY ROAD PINEVILLE LA 71360-5226 3184847400;Cleco Corporation;
 ba3f2f1a-a9d4-e011-a886-001ec94ffe7f;Ballistic Recovery Systems;united states;MN; 300 AIRPORT ROAD SOUTH ST. PAUL MN 55075 6514577491;Ballistic Recovery Systems;
 260493001;Acquia;united states;MA; 53 STATE STREET 10TH FLOOR BOSTON MA 02109 888-922-7842;Acquia;
-3505204;    ABM Industries Inc;united states;NY; 551 FIFTH AVENUE SUITE 300 NEW YORK NY 10176 212 297-0200;ABM Industries Incorporated;    ABM Industries Inc;ABM Industries Inc;ABM Industries;
+3505204;ABM Industries Inc;united states;NY; 551 FIFTH AVENUE SUITE 300 NEW YORK NY 10176 212 297-0200;ABM Industries Incorporated;ABM Industries Inc;ABM Industries Inc;ABM Industries;
 0007790806;BJ Services Company;united states;TX; 2929 ALLEN PARKWAY SUITE 2100 HOUSTON TX 77019-2118 713-439-8600;BJ Services Company;
 31875693;The Greenbrier Companies;united states;OR; ONE CENTERPOINTE DR STE 200 LAKE OSWEGO OR 97035 5036847000;The Greenbrier Companies;Greenbrier Companies Inc.;
 1N03446;National Presto Industries;united states;WI; 3925 N HASTINGS WAY EAU CLAIRE WI 54703 7158392121;National Presto Industries;National Presto Industries, Inc.;
@@ -1420,12 +1420,12 @@ F92000000996;Equity One;united states;FL; 1600 N E MIAMI GARDENS DRIVE NORTH MIA
 2364486;AK Steel Holding;united states;OH; 9227 CENTRE POINTE DRIVE WEST CHESTER OH 45069 5134255000;AK Steel Holding;
 155092;Harsco Corporation;united states;PA; 350 POPLAR CHURCH ROAD CAMP HILL PA 17011 7177637064;Harsco Corporation;Harsco;
 000733447;iRobot;united states;MA; 8 CROSBY DRIVE BEDFORD MA 01730 781-430-3000;iRobot;iRobot Corporation;
-C2055964;TiVo Inc.;united states;CA; 2160 GOLD STREET SAN JOSE CA 95002 408-519-9100;TiVo Inc.;
+C2361749;TiVo Inc.;united states;CA; 2160 GOLD STREET SAN JOSE CA 95002 408-519-9100;TiVo Inc.;
 0004159600;Zale Corporation;united states;TX; 901 W WALNUT HILL LN MS 6B-3 IRVING TX 75038 9725804000;Zale Corporation;
 0800836565;CVR Energy;united states;TX; 2277 PLAZA DRIVE SUITE 500 SUGAR LAND TX 77479 (281) 207-7711;CVR Energy;CVR Energy, Inc.;
 637965;Visteon;united states;MI; ONE VILLAGE CENTER DRIVE VAN BUREN TOWNSHIP MI 48111 800-847-8366;Visteon;Visteon Corporation;
 358863;SCANA;united states;SC; 100 SCANA PARKWAY MAIL CODE - B123 CAYCE SC 29033 8032179000;SCANA Corporation;SCANA;
-2133882;DeVry Education Group;united states;IL; 3005 HIGHLAND PARKWAY DOWNERS GROVE IL 60515 6305157700;DeVry Education Group;
+null;DeVry Education Group;united states;IL; 3005 HIGHLAND PARKWAY DOWNERS GROVE IL 60515 6305157700;DeVry Education Group;
 408542;Invacare;united states;OH; ONE INVACARE WAY P O BOX 4028 ELYRIA OH 44036 4403296000;Invacare;Invacare Corporation;
 1220670;Alleghany;united states;NY; 1411 BROADWAY 34TH FLOOR NEW YORK NY 10018 212-508-8130;Alleghany;Alleghany Corporation;
 W116393;Summit Creek Capital LLC;united states;ID; 360 SUN VALLEY ROAD KETCHUM ID 83340-6849 208-928-7500;Summit Creek Capital LLC;
@@ -1452,4 +1452,4 @@ F0005953;Shangri-La Asia;hong kong;undefined;21/F Citic Tower 1 Tim Mei Avenue C
 153837659;GPT Group;australia;undefined;Level 52, MLC Centre 19 Martin Place Sydney, NSW 2000 Australia;GPT Group;The GPT Group;
 2252531;Franshion Properties (China);hong kong;undefined;Room 4702-03 47th Office Tower Convention Plaza Wan Chai Hong Kong;Franshion Properties (China);
 2681857;Sigma Alimentos;mexico;undefined;Gomez Morin No 1111 Colonia Carrizalejo San Pedro Garza Garcia, NL 66254 Mexico;Sigma Alimentos;Sigma Alimentos, S.A. de C.V.;
-1186128;Wal-Mart de Mexico;mexico;undefined;Blvd Manuel Avila Camacho 647 Delegacion Miguel Hidalgo Mexico, DF 11220;Wal-Mart de Mexico S.A.B. de C.V.;Wal-Mart de Mexico;
+1192266;Wal-Mart de Mexico;mexico;undefined;Blvd Manuel Avila Camacho 647 Delegacion Miguel Hidalgo Mexico, DF 11220;Wal-Mart de Mexico S.A.B. de C.V.;Wal-Mart de Mexico;

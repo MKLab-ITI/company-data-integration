@@ -26,7 +26,7 @@ import java.util.HashSet;
  *
  * @author vasgat
  */
-public class CompanyMatchSimilarity {
+public class CompanyMatchSimilarity extends EntitySimilarity {
 
     TextCorpus companies_corpus;
     TextCorpus address_corpus;
@@ -34,7 +34,7 @@ public class CompanyMatchSimilarity {
     public CompanyMatchSimilarity() {
         HashSet companies = new HashSet();
 
-        try (BufferedReader br = new BufferedReader(new FileReader("src\\main\\java\\company\\data\\integration\\ocmapping\\data\\list_of_company_names.csv"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("D:\\NetBeans\\company-data-integration\\src\\main\\java\\company\\data\\integration\\ocmapping\\data\\list_of_company_names.csv"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 companies.add(line);
@@ -46,7 +46,7 @@ public class CompanyMatchSimilarity {
 
         HashSet addresses = new HashSet();
 
-        try (BufferedReader br = new BufferedReader(new FileReader("src\\main\\java\\company\\data\\integration\\ocmapping\\data\\address_corpus.csv"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("D:\\NetBeans\\company-data-integration\\src\\main\\java\\company\\data\\integration\\ocmapping\\data\\address_corpus.csv"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 addresses.add(line);
@@ -60,12 +60,13 @@ public class CompanyMatchSimilarity {
         this.address_corpus = new TextCorpus.Builder(addresses).build();
     }
 
-    public double calculate(CompanyEntity company1, CompanyEntity company2) {
-        if (company1.address == null || company2.address == null) {
-            return companies_corpus.similarity(company1.company_name, company2.company_name) * 0.85;
+    @Override
+    public Double calculate(CompanyEntity company1, CompanyEntity company2) {
+        if (company1.address == null || company2.address == null || company1.address.equals("null") || company2.address.equals("null")) {
+            return companies_corpus.similarity(company1.company_name, company2.company_name) * 0.95;
         }
 
-        return companies_corpus.similarity(company1.company_name, company2.company_name) * 0.85 + address_corpus.similarity(company1.address, company2.address) * 0.15;
+        return companies_corpus.similarity(company1.company_name, company2.company_name) * 0.95 + address_corpus.similarity(company1.address.toString(), company2.address.toString()) * 0.05;
 
     }
 }

@@ -24,6 +24,7 @@ import java.util.UUID;
 public class CompanyEntity {
 
     public String company_name;
+    public String initial_company_name;
     public String country;
     public String state;
     public String address;
@@ -36,9 +37,9 @@ public class CompanyEntity {
         } else {
             this.id = builder.id;
         }
-        this.company_name = builder.company_name;
+        this.initial_company_name = builder.company_name;
 
-        this.country = builder.country;
+        this.company_name = builder.company_name.replace(",", "").replaceAll("\\s+", " ").trim().toLowerCase();;
 
         this.state = builder.state;
 
@@ -56,7 +57,7 @@ public class CompanyEntity {
         private String address;
 
         public Builder(String company_name) {
-            this.company_name = company_name.replace(",", "");
+            this.company_name = company_name;
         }
 
         public Builder id(String id) {
@@ -65,17 +66,17 @@ public class CompanyEntity {
         }
 
         public Builder country(String country) {
-            this.country = country;
+            this.country = country.toLowerCase();
             return this;
         }
 
         public Builder state(String state) {
-            this.state = state;
+            this.state = state.toLowerCase();
             return this;
         }
 
         public Builder address(String address) {
-            this.address = address;
+            this.address = address.toLowerCase();
             return this;
         }
 

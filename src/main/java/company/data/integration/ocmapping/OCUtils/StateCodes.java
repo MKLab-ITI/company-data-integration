@@ -16,11 +16,15 @@
 package company.data.integration.ocmapping.OCUtils;
 
 import certh.iti.mklab.jSimilarity.stringsimilarities.JaroWinklerDistance;
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import org.bson.Document;
 
 /**
  *
@@ -28,25 +32,10 @@ import java.util.Map;
  */
 public class StateCodes {
 
-    private String DEFAULT_FILE_PATH = "src\\main\\java\\company\\data\\integration\\ocmapping\\data\\state_codes.csv";
-
     private Map<String, String> states;
 
-    public StateCodes() {
-        loadCodes(DEFAULT_FILE_PATH);
-        states.put("quebec", "qc");
-        states.put("Nova Scotia", "ns");
-        states.put("New Brunswick", "nb");
-        states.put("Manitoba", "mb");
-        states.put("British Columbia", "bc");
-        states.put("Prince Edward Island", "pe");
-        states.put("Saskatchewan", "sk");
-        states.put("Alberta", "al");
-        states.put("Newfoundland and Labrador", "nl");
-    }
-
-    public StateCodes(String filePath) {
-        loadCodes(filePath);
+    public StateCodes(Jurisdictions jurisdictions) {
+        this.states = jurisdictions.getStateCodes();
     }
 
     public String findCode(String state) {
@@ -84,22 +73,5 @@ public class StateCodes {
             }
         }
         return null;
-    }
-
-    public void loadCodes(String filePath) {
-
-        states = new HashMap();
-
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
-
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] codes = line.split(";");
-                states.put(codes[0], codes[1]);
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

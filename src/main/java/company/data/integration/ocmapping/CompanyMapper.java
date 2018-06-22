@@ -15,24 +15,26 @@
  */
 package company.data.integration.ocmapping;
 
-import company.data.integration.ocmapping.similarityfunctions.CompanyMatchSimilarity;
 import company.data.integration.ocmapping.OCUtils.CountryCodes;
+import company.data.integration.ocmapping.OCUtils.Jurisdictions;
 import company.data.integration.ocmapping.OCUtils.StateCodes;
+import company.data.integration.ocmapping.OpenCorporatesAPI.CompanyStateOfIncorporation;
 import company.data.integration.ocmapping.OpenCorporatesAPI.OCSearchCompany;
+import company.data.integration.ocmapping.OpenCorporatesAPI.OCSearchTermFormatter;
+import company.data.integration.ocmapping.similarityfunctions.EntitySimilarity;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Set;
 import javafx.util.Pair;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import org.bson.Document;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
@@ -45,87 +47,85 @@ public class CompanyMapper {
     private StateCodes state_codes;
     private CountryCodes country_codes;
     private OpenCorporatesClient client;
-    private CompanyMatchSimilarity similarity;
+    private EntitySimilarity similarity;
 
-    public CompanyMapper(OpenCorporatesClient client, StateCodes state_codes, CountryCodes country_codes, CompanyMatchSimilarity similarity) {
+    public CompanyMapper(OpenCorporatesClient client, Jurisdictions jurisdictions, EntitySimilarity similarity) {
         this.client = client;
-        this.state_codes = state_codes;
-        this.country_codes = country_codes;
+        this.state_codes = new StateCodes(jurisdictions);
+        this.country_codes = new CountryCodes(jurisdictions);
         this.similarity = similarity;
     }
 
-    public String findMatch(CompanyEntity query) throws UnsupportedEncodingException {
+    public Document findMatch(CompanyEntity query) throws UnsupportedEncodingException {
         Pair<String, String> codes = getCodes(query);
-        JSONArray results = getQueryResults(query, codes);
+        if (codes.getKey() == null) {
+            return null;
+        }
+        if (codes.getKey().equals("us") && codes.getKey() == null) {
+            return null;
+        }
 
-        String mapped_entity = search_in_results(query, results);
+        String search_term = query.company_name;
+        ArrayList<Document> results = getQueryResults(search_term, codes);
+
+        Document mapped_entity = search_in_results(query, results);
 
         if (mapped_entity != null) {
+            if (mapped_entity.getBoolean("is_branch") == false) {
+                mapped_entity.remove("is_branch");
+                mapped_entity.append("incorporation_jurisdiction_code", mapped_entity.getString("jurisdiction_code"));
+            } else {
+                mapped_entity.remove("is_branch");
+                mapped_entity.append("incorporation_jurisdiction_code", CompanyStateOfIncorporation.get(mapped_entity.getString("jurisdiction_code"), mapped_entity.getString("company_number")));
+            }
             return mapped_entity;
         }
 
-        if (query.company_name.contains("inc") && !query.company_name.contains("incorporated")) {
-            query.company_name = query.company_name
-                    .replace("inc", "incorporated")
-                    .replace("incorporated.", "incorporated");
-            results = getQueryResults(query, codes);
-            return search_in_results(query, results);
-        } else if (query.company_name.contains("incorporated")) {
-            query.company_name = query.company_name
-                    .replace("incorporated", "inc");
-            results = getQueryResults(query, codes);
-            return search_in_results(query, results);
-        } else if (query.company_name.contains("corporation")) {
-            query.company_name = query.company_name
-                    .replace("corporation", "corp");
-            results = getQueryResults(query, codes);
-            return search_in_results(query, results);
+        if (!search_term.equals(OCSearchTermFormatter.format(query.company_name))) {
+            results = getQueryResults(OCSearchTermFormatter.format(query.company_name), codes);
+            mapped_entity = search_in_results(query, results);
         }
 
-        if (mapped_entity == null) {
-            query.company_name = query.company_name
-                    .toLowerCase()
-                    .replace("incorporated", "")
-                    .replace("inc.", "")
-                    .replace(" inc", "")
-                    .replace("corporation", "")
-                    .replace(" corp", "")
-                    .replace("limited", "")
-                    .replace(" ltd", "")
-                    .replace("plc", "")
-                    .replace(" lp", "")
-                    .trim();
-            results = getQueryResults(query, codes);
-            return search_in_results(query, results);
+        if (mapped_entity == null && !search_term.equals(OCSearchTermFormatter.removeType(search_term))) {
+            results = getQueryResults(search_term, codes);
+            mapped_entity = search_in_results(query, results);
         }
 
-        return null;
+        if (mapped_entity != null && mapped_entity.getBoolean("is_branch") == false) {
+            mapped_entity.remove("is_branch");
+            mapped_entity.append("incorporation_jurisdiction_code", mapped_entity.getString("jurisdiction_code"));
+        } else {
+            mapped_entity.remove("is_branch");
+            mapped_entity.append("incorporation_jurisdiction_code", CompanyStateOfIncorporation.get(mapped_entity.getString("jurisdiction_code"), mapped_entity.getString("company_number")));
+        }
+
+        return mapped_entity;
     }
 
-    private String search_in_results(CompanyEntity query, JSONArray results) {
+    private Document search_in_results(CompanyEntity query, ArrayList<Document> results) {
+
         HashMap<Integer, Double> candidates = new HashMap();
         double max = 0;
 
-        for (int i = 0; i < results.length(); i++) {
-            JSONObject company = ((JSONObject) results.get(i)).getJSONObject("company");
+        for (int i = 0; i < results.size(); i++) {
+            Document company = results.get(i).get("company", Document.class);
 
-            JSONArray previous_names = company.getJSONArray("previous_names");
+            ArrayList<Document> previous_names = company.get("previous_names", ArrayList.class);
 
             String candidate_name = company.getString("name");
-            
+
             CompanyEntity candidate_match = new CompanyEntity.Builder(candidate_name)
                     .address(
-                            company.get("registered_address_in_full").toString()
+                            company.getString("registered_address_in_full")
                     )
                     .build();
 
             double sim = similarity.calculate(query, candidate_match);
 
-            for (int j = 0; j < previous_names.length(); j++) {
-
-                candidate_match = new CompanyEntity.Builder(previous_names.getJSONObject(j).getString("company_name"))
+            for (int j = 0; j < previous_names.size(); j++) {
+                candidate_match = new CompanyEntity.Builder(previous_names.get(j).getString("company_name"))
                         .address(
-                                company.get("registered_address_in_full").toString()
+                                company.getString("registered_address_in_full")
                         )
                         .build();
 
@@ -140,43 +140,47 @@ public class CompanyMapper {
             }
 
             candidates.put(i, sim);
-
         }
 
-        String mapped_entity = null;
+        Document mapped_entity = null;
         candidates.values().retainAll(Collections.singleton(max));
 
-        if (max >= 0.425) {
+        if (max >= 0.45) {
             Set<Integer> keys = candidates.keySet();
             for (Integer index : keys) {
-                JSONObject temp_company = ((JSONObject) results.get(index)).getJSONObject("company");
+                Document temp_company = results.get(index).get("company", Document.class);
 
                 if (temp_company.get("branch_status") == null) {
-
                     if (mapped_entity == null) {
-                        mapped_entity = ((JSONObject) results.get(index)).getJSONObject("company")
-                                .getString("opencorporates_url");
-                    }
-
-                    if (temp_company.getString("current_status") != null && (temp_company.getString("current_status").contains("Active") || temp_company.getString("current_status").contains("Good Standing"))) {
-
-                        mapped_entity = ((JSONObject) results.get(index)).getJSONObject("company")
-                                .getString("opencorporates_url");
+                        mapped_entity = temp_company;
                         break;
                     }
                 }
             }
             if (mapped_entity == null) {
-                mapped_entity = ((JSONObject) results.get(keys.iterator().next())).getJSONObject("company")
-                        .getString("opencorporates_url");
+                mapped_entity = results.get(keys.iterator().next()).get("company", Document.class);
             }
         }
-        return mapped_entity;
+
+        if (mapped_entity != null) {
+            Document matchedCompany = new Document("opencorporates_url", mapped_entity.getString("opencorporates_url"))
+                    .append("jurisdiction_code", mapped_entity.getString("jurisdiction_code"))
+                    .append("company_number", mapped_entity.getString("company_number"))
+                    .append("industry_codes", mapped_entity.get("industry_codes", ArrayList.class))
+                    .append("name", mapped_entity.getString("name"));
+            if (mapped_entity.get("branch_status") == null) {
+                matchedCompany.append("is_branch", false);
+                return matchedCompany;
+            } else {
+                matchedCompany.append("is_branch", true);
+                return matchedCompany;
+            }
+        }
+        return null;
     }
 
-    private JSONArray getQueryResults(CompanyEntity query, Pair<String, String> codes) throws UnsupportedEncodingException {
-        String search_term = query.company_name;
-        JSONObject result = null;
+    private ArrayList<Document> getQueryResults(String search_term, Pair<String, String> codes) throws UnsupportedEncodingException {
+        Document result = null;
 
         if (codes.getKey() != null && codes.getValue() != null) {
             String jurisdiction_code = codes.getKey() + "_" + codes.getValue();
@@ -211,10 +215,15 @@ public class CompanyMapper {
                     .build();
         }
 
-        return result.getJSONObject("results").getJSONArray("companies");
+        return result.get("results", Document.class).get("companies", ArrayList.class);
     }
 
     private Pair<String, String> getCodes(CompanyEntity query) {
+        if (query.country == null && query.state == null && query.address != null) {
+            query.country = country_codes.findCountryInText(query.address);
+            query.state = state_codes.findStateInText(query.address);
+        }
+
         if (query.country != null && query.state != null) {
             return new Pair(
                     country_codes.findCode(query.country),
@@ -230,11 +239,11 @@ public class CompanyMapper {
         }
 
         if (query.country == null && query.state == null) {
-            return searchWikipedia(query.company_name);
+            return searchWikipedia(query.initial_company_name);
         }
 
         if (query.country.toLowerCase().equals("united states") && query.state == null) {
-            Pair<String, String> codes = searchWikipedia(query.company_name);
+            Pair<String, String> codes = searchWikipedia(query.initial_company_name);
             if (codes.getKey() != null && codes.getKey().equals("us")) {
                 return codes;
             } else {
@@ -256,26 +265,29 @@ public class CompanyMapper {
                     .userAgent("Mozilla/37.0")
                     .timeout(60000);
 
-            Document document = connection.get();
+            org.jsoup.nodes.Document document = connection.get();
 
             Elements rows = document.select(".infobox tr");
 
             for (int i = 0; i < rows.size(); i++) {
                 Element contents = rows.get(i);
 
-                if (contents.select("th") != null
-                        && (contents.select("th").text().toLowerCase().equals("location")
-                        || contents.select("th").text().toLowerCase().equals("headquarters"))) {
+                if (contents.select("th") != null) {
+                    if ((contents.select("th").text().toLowerCase().equals("location")
+                            || contents.select("th").text().toLowerCase().equals("headquarters"))) {
 
-                    String location = contents.select("td").text().toLowerCase();
+                        String location = contents.select("td").text().toLowerCase().replace(".", "").replace(",", "");
 
-                    String country_code = country_codes.findCountryInText(location);
-                    if (country_code.equals("us")) {
-                        String state_code = state_codes.findStateInText(location);
-                        return new Pair(country_code, state_code);
+                        String country_code = country_codes.findCountryInText(location);
+
+                        if (country_code != null && country_code.equals("us")) {
+                            String state_code = state_codes.findStateInText(location);
+
+                            return new Pair(country_code, state_code);
+                        }
+
+                        return new Pair(country_code, null);
                     }
-
-                    return new Pair(country_code, null);
                 }
             }
         } catch (IOException ex) {

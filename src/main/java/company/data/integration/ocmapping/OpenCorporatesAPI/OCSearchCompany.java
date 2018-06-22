@@ -18,7 +18,7 @@ package company.data.integration.ocmapping.OpenCorporatesAPI;
 import company.data.integration.ocmapping.http.HTTPRequest;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import org.json.JSONObject;
+import org.bson.Document;
 
 /**
  *
@@ -115,9 +115,9 @@ public class OCSearchCompany {
             return this;
         }
 
-        public JSONObject build() throws UnsupportedEncodingException {
+        public Document build() throws UnsupportedEncodingException {
             request.GET("companies/search");
-            return new JSONObject(request.getResponse());
+            return Document.parse(request.getResponse());
         }
 
     }
