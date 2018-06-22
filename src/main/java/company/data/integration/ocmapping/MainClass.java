@@ -19,7 +19,7 @@ public class MainClass {
         CompanyEntity query = new CompanyEntity.Builder("Apple Inc").build();
 
         CompanyMapper mapper = new CompanyMapper(
-                new OpenCorporatesClient("MCS2yzvPpwycExpJUAFM"),
+                new OpenCorporatesClient("*****"),
                 new Jurisdictions(),
                 similarity
         );
