@@ -6,8 +6,7 @@ Implements techniques for matching between company-related data across different
 
           CompanyMapper mapper = new CompanyMapper(
                                         new OpenCorporatesClient(api_token),
-                                        new StateCodes(),
-                                        new CountryCodes(),
+                                        new Jurisdictions(),
                                         new CompanyMatchSimilarity()
                                 );
           CompanyQuery query = new CompanyQuery.Builder("Coca-Cola Company").build();
